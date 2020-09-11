@@ -12,9 +12,10 @@ class Book {
 const addBookToLibrary = (book) => {
 	if(book.title === '' || book.author === '' || book.pages === ''){
 		alert("field can't be blank");
-		else{
-			myLibrary.push(book)
-		}
+	}
+   else{
+		myLibrary.push(book)
+		console.log(book)
 	}
 }
 
@@ -26,5 +27,12 @@ const deleteBookFromLibrary = (e) =>{
 const isReadStatus  = (e) =>{
 	const {id} = e.target.parentElement.dataset;
 	myLibrary[id].read = !myLibrary[id].read
+}
+
+const resetInput = () =>{
+	document.querySelector('#bookAuthor').value = '';
+  document.querySelector('#bookTitle').value = '';
+  document.querySelector('#bookPages').value = '';
+  document.querySelector('#bookRead').checked = false;
 }
 
