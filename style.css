@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+
+*{
+	margin: 0;
+	background-color: red;
+}
+
+body{
+font-family: 'Amatic SC', cursive;
+
+}
+
+.read, .delete{
+	width: 80%;
+	font-size: 11px;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: uppercase;
+	
+}
+.read{
+	color: green;
+}
+
+ .delete{
+ 	color: red;
+ }
+
+.io{
+font-family: 'Amatic SC', cursive;
+font-weight: 700;
+font-size: 54px;
+}	
+
+.card-sh{
+   box-shadow: 5px 5px 15px 5px #000000;
+}
+h4,h5{
+	font-family: 'Amatic SC', cursive;
+	font-size: 54px;
+	font-weight: 700;
+}
+p{
+	font-family: 'Gentium Basic', serif;
+}
+
+form{
+font-family: 'Amatic SC', cursive;
+font-weight: 700;
+font-size: 15px;
+}
+
+.bg-frm{
+ background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+}

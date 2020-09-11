@@ -2,7 +2,7 @@
 /* global myLibrary:true, addBookToLibrary, Book, render */
 
 
-function populateStorage() {
+const  populateStorage = () =>{
   const bookOne = ['Budapeste', 'Chico Buarque de Holanda', 174, true];
   const bookTwo = [
     'Will my cat eat my eyeballs?',
@@ -16,7 +16,7 @@ function populateStorage() {
   localStorage.setItem('book3', JSON.stringify(bookThree));
 }
 
-function fetchLibrary() {
+const fetchLibrary = () =>{
   // If it is the first time entering the site, creates a storage with predetermined books
   if (!localStorage.getItem('book1')) populateStorage();
 
@@ -28,7 +28,7 @@ function fetchLibrary() {
   }
 }
 
-function saveLibrary() {
+const saveLibrary = () => {
   localStorage.clear();
 
   let i = 1;

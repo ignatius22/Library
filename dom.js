@@ -1,31 +1,39 @@
-const form = document.querySelector('form');
+/* eslint-disable no-plusplus */
+/* global myLibrary:true, addBookToLibrary, Book, deleteBook, changeReadStatus, clearInput */
 
-const render = () =>{
-	const bookSelf = document.querySelector('#book-self')
-	bookSelf.innerHTML = ''
-	for(let i = 0; i < myLibrary.length; i++){
-		bookSelf.innerHTML += `
-        <th scope="row">${myLibrary[i].pages}</th>
-			  <td>${myLibrary[i].title}</td>
-			  <td>${myLibrary[i].author}</td>
-			  <td><p> book is ${myLibrary[i].read ? ' read' : 'unread'} </p></td>
-			  <td> <a href="#" class="btn-sm read btn-primary"> change read status</a></td>
-			  <td><a href="#" class="btn-sm btn-primary delete" id="delete-${i}">delete book</a></td>
-		
-		`
-	}
+const form = document.querySelector('.form');
+
+const render = () => {
+    const booksctn = document.querySelector('#books-ctn');
+    booksctn.innerHTML = '';
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < myLibrary.length; i++) {
+        booksctn.innerHTML += ` 
+    <div class= "container col-4 mb-3">
+      <div class="card card-sh mt-2 bg-frm" >
+        <div class="card-body" data-id=${i}>
+          <h5 class="card-title"> ${myLibrary[i].title} </h5>
+          <p class="card-text"> ${myLibrary[i].title} is written by ${myLibrary[i].author} and it has ${myLibrary[i].pages} pages </p>
+          <p> book is ${myLibrary[i].read ? ' read' : 'unread'} </p>
+          
+          <a href="#" class=" read "> change read status </a>
+          <br>
+          <a href="#" class=" delete" id="delete-${i}">delete book</a>
+         
+        </div>
+      </div>
+    `;
+    }
 }
 
-
-
-document.querySelector('#book-self').addEventListener('click', (e) => {
+document.querySelector('#books-ctn').addEventListener('click', (e) => {
     e.preventDefault();
     if (e.target.classList.contains('delete')) {
-        deleteBookFromLibrary(e);
+        deleteBook(e);
         render();
     }
     if (e.target.classList.contains('read')) {
-        isReadStatus(e) ;
+        changeReadStatus(e);
         render();
     }
 });
@@ -38,6 +46,6 @@ form.addEventListener('submit', (e) => {
     const read = document.querySelector('#bookRead').checked;
     const book = new Book(author, title, pages, read);
     addBookToLibrary(book);
-    resetInput();
+    clearInput();
     render();
 });
