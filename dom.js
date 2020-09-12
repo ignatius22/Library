@@ -12,10 +12,14 @@ const render = () => {
           <h5 class="card-title"> ${myLibrary[i].title} </h5>
           <p class="card-text"> ${myLibrary[i].title} is written by ${myLibrary[i].author} and it has ${myLibrary[i].pages} pages </p>
           <p> book is ${myLibrary[i].read ? ' read' : 'unread'} </p>
-          
-          <a href="#" class=" read "> change read status </a>
+          <Button  class=" read ">
+            change read status
+          </Button>
           <br>
-          <a href="#" class=" delete" id="delete-${i}">delete book</a>
+          <Button  class=" delete" id="delete-${i}">
+            delete book
+          </Button>
+          
          
         </div>
       </div>

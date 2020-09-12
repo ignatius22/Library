@@ -14,14 +14,43 @@ body {
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 7px;
+outline: none;
+box-shadow: 0 5px #999;
+outline: none;
+
+}
+
+
+.delete:hover {
+  background-color: orange;
+  color: black;
+}
+
+
+.read:hover {background-color: #3e8e41}
+
+.read:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.delete:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .read {
-  color: green;
+  background-color: #4CAF50;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .delete {
-  color: red;
+  background-color: red;
+  color: white;
 }
 
 .io {
