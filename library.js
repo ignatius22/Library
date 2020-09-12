@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const myLibrary = [];
 
 class Book {
@@ -9,14 +8,10 @@ class Book {
     this.read = read;
   }
 }
+ 
 
 const addBookToLibrary = (book) => {
-  if (book.title === '' || book.author === '' || book.pages === '') {
-    // eslint-disable-next-line no-throw-literal
-    alert('input field can not be empty');
-  } else {
     myLibrary.push(book);
-  }
 };
 
 const deleteBook = (e) => {
