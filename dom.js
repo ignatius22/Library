@@ -1,7 +1,6 @@
 const form = document.querySelector('.form');
 const booksctn = document.querySelector('#books-ctn');
 const render = () => {
-  
   booksctn.innerHTML = '';
 
   for (let i = 0; i < myLibrary.length; i++) {
