@@ -1,7 +1,7 @@
 const form = document.querySelector('.form');
-
+const booksctn = document.querySelector('#books-ctn');
 const render = () => {
-  const booksctn = document.querySelector('#books-ctn');
+  
   booksctn.innerHTML = '';
 
   for (let i = 0; i < myLibrary.length; i++) {
@@ -19,15 +19,13 @@ const render = () => {
           <Button  class="delete" id="delete-${i}">
             delete book
           </Button>
-          
-         
         </div>
       </div>
     `;
   }
 };
 
-document.querySelector('#books-ctn').addEventListener('click', (e) => {
+booksctn.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.classList.contains('delete')) {
     deleteBook(e);
