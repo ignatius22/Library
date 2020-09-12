@@ -16,7 +16,7 @@ const render = () => {
             change read status
           </Button>
           <br>
-          <Button  class=" delete" id="delete-${i}">
+          <Button  class="delete" id="delete-${i}">
             delete book
           </Button>
           

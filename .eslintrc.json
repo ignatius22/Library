@@ -16,7 +16,8 @@
     "arrow-parens": "off",
     "no-alert": "off",
     "no-undef": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-unused-vars": "off"
   },
   "ignorePatterns": [
     "dist/",

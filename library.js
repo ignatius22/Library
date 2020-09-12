@@ -8,10 +8,10 @@ class Book {
     this.read = read;
   }
 }
- 
+
 
 const addBookToLibrary = (book) => {
-    myLibrary.push(book);
+  myLibrary.push(book);
 };
 
 const deleteBook = (e) => {
