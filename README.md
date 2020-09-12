@@ -36,7 +36,7 @@ $ git clone https://github.com/ignatius22/library.git
 
 # Go into the repository
 $ cd library
-  locate the index file and open in the browser of your choice
+  locate the index file and open with the browser of your choice
 
 # run url on your preffered browser
 
