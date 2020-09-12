@@ -1,14 +1,13 @@
-/* eslint-disable no-plusplus */
-/* global myLibrary:true, addBookToLibrary, Book, deleteBook, changeReadStatus, clearInput */
+
 
 const form = document.querySelector('.form');
 
 const render = () => {
-    const booksctn = document.querySelector('#books-ctn');
-    booksctn.innerHTML = '';
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < myLibrary.length; i++) {
-        booksctn.innerHTML += ` 
+  const booksctn = document.querySelector('#books-ctn');
+  booksctn.innerHTML = '';
+
+  for (let i = 0; i < myLibrary.length; i++) {
+    booksctn.innerHTML += ` 
     <div class= "container col-4 mb-3">
       <div class="card card-sh mt-2 bg-frm" >
         <div class="card-body" data-id=${i}>
@@ -23,29 +22,29 @@ const render = () => {
         </div>
       </div>
     `;
-    }
-}
+  }
+};
 
 document.querySelector('#books-ctn').addEventListener('click', (e) => {
-    e.preventDefault();
-    if (e.target.classList.contains('delete')) {
-        deleteBook(e);
-        render();
-    }
-    if (e.target.classList.contains('read')) {
-        changeReadStatus(e);
-        render();
-    }
+  e.preventDefault();
+  if (e.target.classList.contains('delete')) {
+    deleteBook(e);
+    render();
+  }
+  if (e.target.classList.contains('read')) {
+    changeReadStatus(e);
+    render();
+  }
 });
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const author = document.querySelector('#bookAuthor').value;
-    const title = document.querySelector('#bookTitle').value;
-    const pages = document.querySelector('#bookPages').value;
-    const read = document.querySelector('#bookRead').checked;
-    const book = new Book(author, title, pages, read);
-    addBookToLibrary(book);
-    clearInput();
-    render();
+  e.preventDefault();
+  const author = document.querySelector('#bookAuthor').value;
+  const title = document.querySelector('#bookTitle').value;
+  const pages = document.querySelector('#bookPages').value;
+  const read = document.querySelector('#bookRead').checked;
+  const book = new Book(author, title, pages, read);
+  addBookToLibrary(book);
+  clearInput();
+  render();
 });

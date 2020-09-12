@@ -17,21 +17,21 @@ const addBookToLibrary = (book) => {
   } else {
     myLibrary.push(book);
   }
-}
+};
 
-const deleteBook = (e) =>{
+const deleteBook = (e) => {
   const { id } = e.target.parentElement.dataset;
   myLibrary.splice(id, 1);
-}
+};
 
-const changeReadStatus = (e) =>{
+const changeReadStatus = (e) => {
   const { id } = e.target.parentElement.dataset;
   myLibrary[id].read = !myLibrary[id].read;
-}
+};
 
-const clearInput = () =>{
+const clearInput = () => {
   document.querySelector('#bookAuthor').value = '';
   document.querySelector('#bookTitle').value = '';
   document.querySelector('#bookPages').value = '';
   document.querySelector('#bookRead').checked = false;
-}
+};

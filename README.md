@@ -4,7 +4,7 @@ A simple book library app created with javascript
 
 ## Live demo
 
-[live demo](https://shielded-oasis-34342.herokuapp.com/login)
+[live demo](https://rawcdn.githack.com/ignatius22/Library/fe55bee50c483b0d673510e5659ecfcc217a8eb0/index.html)
 
 - Screenshot
 ![alt text](bookLibrary.png)

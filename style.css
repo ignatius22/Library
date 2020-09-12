@@ -1,58 +1,60 @@
-*{
-	margin: 0;
-	background-color: whitesmoke;
+* {
+  margin: 0;
+  background-color: whitesmoke;
 }
 
-body{
-font-family: 'Amatic SC', cursive;
-
-
+body {
+  font-family: 'Amatic SC', cursive;
 }
 
-.read, .delete{
-	width: 80%;
-	font-size: 11px;
-	font-weight: 500;
-	text-decoration: none;
-	text-transform: uppercase;
-	
-}
-.read{
-	color: green;
+.read,
+.delete {
+  width: 80%;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
- .delete{
- 	color: red;
- }
-
-.io{
-font-family: 'Amatic SC', cursive;
-font-weight: 700;
-font-size: 54px;
-}	
-
-.card-sh{
-   box-shadow: 5px 5px 15px 5px #000000;
-}
-h4,h5{
-	font-family: 'Amatic SC', cursive;
-	font-size: 54px;
-	font-weight: 700;
-}
-p{
-	font-family: 'Gentium Basic', serif;
+.read {
+  color: green;
 }
 
-form{
-font-family: 'Amatic SC', cursive;
-font-weight: 700;
-font-size: 15px;
+.delete {
+  color: red;
 }
 
-.bg-frm{
- background-color: #fff;
-background-image:
-linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-linear-gradient(#eee .1em, transparent .1em);
-background-size: 100% 1.2em;
+.io {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 54px;
+}
+
+.card-sh {
+  box-shadow: 5px 5px 15px 5px #000;
+}
+
+h4,
+h5 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Gentium Basic', serif;
+}
+
+form {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bg-frm {
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
 }
